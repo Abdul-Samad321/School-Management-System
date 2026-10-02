@@ -16,7 +16,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/students/all');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/all`);
         const students = res.data;
 
         const totalStudents = students.length;
